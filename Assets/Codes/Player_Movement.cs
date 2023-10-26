@@ -8,7 +8,6 @@ public class Player_Movement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 5f;
-    public float sprintMultiplier = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,14 +24,14 @@ public class Player_Movement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move*speed*Time.deltaTime);
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            speed *= sprintMultiplier;
+            speed = speed*2;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            speed /= sprintMultiplier;
+            speed /= 2;
         }
     }
 }
