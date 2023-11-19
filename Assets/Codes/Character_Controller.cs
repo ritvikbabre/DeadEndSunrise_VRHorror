@@ -2,6 +2,23 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// Description:
+// The script Character_Controller.cs is used to control the player character
+// It is attached to the player character's GameObject
+// and uses the Unity's CharacterController component
+// to handle the character's movement, rotation, and gravity.
+
+// Variables:
+// - _input: a Vector2 variable that stores the input from the player.
+// - _characterController: a CharacterController variable that stores the CharacterController component.
+// - _direction: a Vector3 variable that stores the direction of the character.
+// - speed: a float variable that stores the speed of the character.
+// - smoothTime: a float variable that stores the smooth time of the character's rotation.
+// - _currentVelocity: a float variable that stores the current velocity of the character's rotation.
+// - _gravity: a float variable that stores the gravity of the character.
+// - gravityMultiplier: a float variable that stores the gravity multiplier of the character.
+// - _velocity: a float variable that stores the velocity of the character.
+
 [RequireComponent(typeof(CharacterController))]
 public class Character_Controller : MonoBehaviour
 {
@@ -28,15 +45,17 @@ public class Character_Controller : MonoBehaviour
 
     #endregion
 
+    // The Awake() method is used to get the CharacterController component from the GameObject. 
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
     }
 
+    // The Update() method is used to apply gravity, rotation, and movement to the character.
     private void Update()
     {
         ApplyGravity();
-        //ApplyRotation();
+        ApplyRotation();
         ApplyMovement();
     }
 
