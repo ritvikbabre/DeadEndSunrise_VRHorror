@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 // Description:
-// The script Character_Controller.cs is used to control the player character
+// To control the character
 // It is attached to the player character's GameObject
 // and uses the Unity's CharacterController component
 // to handle the character's movement, rotation, and gravity.
