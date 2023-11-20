@@ -18,9 +18,11 @@ public class animationStateController : MonoBehaviour
         bool isWalking = animator.GetBool("isWalking");
         bool isrunning = animator.GetBool("isRunning");
         bool isWalkingRight = animator.GetBool("isWalkingRight");
+        bool isWalkingLeft = animator.GetBool("isWalkingLeft");
         bool forwardPressed = Input.GetKey("w");
         bool runPressed = Input.GetKey("left shift");
         bool rightPressed = Input.GetKey("d");
+        bool leftPressed = Input.GetKey("a");
 
         if (!isWalking && forwardPressed)
         {
@@ -54,6 +56,17 @@ public class animationStateController : MonoBehaviour
         if (isWalkingRight && !rightPressed)
         {
             animator.SetBool("isWalkingRight", false);
+        }
+
+        // initiate left strafe Animation
+        if (!isWalkingLeft && leftPressed)
+        {
+            animator.SetBool("isWalkingLeft", true);
+        }
+
+        if (isWalkingLeft && !leftPressed)
+        {
+            animator.SetBool("isWalkingLeft", false);
         }
 
     }
