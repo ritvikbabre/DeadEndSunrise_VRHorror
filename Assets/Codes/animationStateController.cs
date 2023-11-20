@@ -19,7 +19,10 @@ public class animationStateController : MonoBehaviour
         bool isrunning = animator.GetBool("isRunning");
         bool isWalkingRight = animator.GetBool("isWalkingRight");
         bool isWalkingLeft = animator.GetBool("isWalkingLeft");
+        bool isWalkingBackward = animator.GetBool("isWalkingBackward");
+
         bool forwardPressed = Input.GetKey("w");
+        bool backwardPressed = Input.GetKey("s");
         bool runPressed = Input.GetKey("left shift");
         bool rightPressed = Input.GetKey("d");
         bool leftPressed = Input.GetKey("a");
@@ -67,6 +70,17 @@ public class animationStateController : MonoBehaviour
         if (isWalkingLeft && !leftPressed)
         {
             animator.SetBool("isWalkingLeft", false);
+        }
+
+        // initiate backward walking Animation
+        if (!isWalkingBackward && backwardPressed)
+        {
+            animator.SetBool("isWalkingBackward", true);
+        }
+
+        if (isWalkingBackward && !leftPressed)
+        {
+            animator.SetBool("isWalkingBackward", false);
         }
 
     }
