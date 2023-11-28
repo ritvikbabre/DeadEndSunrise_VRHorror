@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mouse_Look : MonoBehaviour
 {
-
+    public Transform target;
     public float MouseSensi=100f; 
     public Transform PlayerBody;
     public bool cursorLocked=false;
@@ -20,6 +20,7 @@ public class Mouse_Look : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.K))
         {
       
@@ -36,5 +37,10 @@ public class Mouse_Look : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         PlayerBody.Rotate(Vector3.up * mouseX);
+    }
+
+    private void LateUpdate()
+    {
+        transform.position = target.position;
     }
 }
