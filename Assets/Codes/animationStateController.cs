@@ -20,12 +20,14 @@ public class animationStateController : MonoBehaviour
         bool isWalkingRight = animator.GetBool("isWalkingRight");
         bool isWalkingLeft = animator.GetBool("isWalkingLeft");
         bool isWalkingBackward = animator.GetBool("isWalkingBackward");
+        bool isCrouching = animator.GetBool("isCrouching");
 
         bool forwardPressed = Input.GetKey("w");
         bool backwardPressed = Input.GetKey("s");
         bool runPressed = Input.GetKey("left shift");
         bool rightPressed = Input.GetKey("d");
         bool leftPressed = Input.GetKey("a");
+        bool crouchPressed = Input.GetKey("c");
 
         if (!isWalking && forwardPressed)
         {
@@ -81,6 +83,16 @@ public class animationStateController : MonoBehaviour
         if (isWalkingBackward && !leftPressed)
         {
             animator.SetBool("isWalkingBackward", false);
+        }
+
+        if (!isWalking && crouchPressed)
+        {
+            animator.SetBool("isCrouching", true);
+        }
+
+        if (isCrouching && !crouchPressed)
+        {
+            animator.SetBool("isCrouching", false);
         }
 
     }
