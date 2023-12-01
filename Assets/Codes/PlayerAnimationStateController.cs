@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class animationStateController : MonoBehaviour
+public class PlayerAnimationStateController : MonoBehaviour
 {
     Animator animator;
 
@@ -21,6 +21,7 @@ public class animationStateController : MonoBehaviour
         bool isWalkingLeft = animator.GetBool("isWalkingLeft");
         bool isWalkingBackward = animator.GetBool("isWalkingBackward");
         bool isCrouching = animator.GetBool("isCrouching");
+        bool isCrawling = animator.GetBool("isCrawling");
 
         bool forwardPressed = Input.GetKey("w");
         bool backwardPressed = Input.GetKey("s");
@@ -28,6 +29,7 @@ public class animationStateController : MonoBehaviour
         bool rightPressed = Input.GetKey("d");
         bool leftPressed = Input.GetKey("a");
         bool crouchPressed = Input.GetKey("c");
+        bool crawlPressed = Input.GetKey("left ctrl");
 
         if (!isWalking && forwardPressed)
         {
@@ -85,6 +87,7 @@ public class animationStateController : MonoBehaviour
             animator.SetBool("isWalkingBackward", false);
         }
 
+        // initiate crouch Animation
         if (!isWalking && crouchPressed)
         {
             animator.SetBool("isCrouching", true);
@@ -93,6 +96,17 @@ public class animationStateController : MonoBehaviour
         if (isCrouching && !crouchPressed)
         {
             animator.SetBool("isCrouching", false);
+        }
+
+        // initiate crawl Animation
+        if (!isCrawling && crawlPressed)
+        {
+            animator.SetBool("isCrawling", true);
+        }
+
+        if (isCrawling && !crawlPressed)
+        {
+            animator.SetBool("isCrawling", false);
         }
 
     }
