@@ -88,7 +88,7 @@ public class PlayerAnimationStateController : MonoBehaviour
         }
 
         // initiate crouch Animation
-        if (!isWalking && crouchPressed)
+        if (!isCrouching && crouchPressed)
         {
             animator.SetBool("isCrouching", true);
         }
