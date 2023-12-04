@@ -14,10 +14,10 @@ AnimatorStateMachine:
     m_Position: {x: 40, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6211887779293377267}
-    m_Position: {x: 40, y: -210, z: 0}
+    m_Position: {x: 40, y: -240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -943336520667103487}
-    m_Position: {x: 40, y: -330, z: 0}
+    m_Position: {x: 40, y: -390, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1029236359789997846}
     m_Position: {x: -210, y: 80, z: 0}
@@ -29,10 +29,10 @@ AnimatorStateMachine:
     m_Position: {x: 290, y: 0, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3956969912983347760}
-    m_Position: {x: -240, y: -210, z: 0}
+    m_Position: {x: -250, y: -240, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4659174112163270161}
-    m_Position: {x: 320, y: -210, z: 0}
+    m_Position: {x: 380, y: -240, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -362,43 +362,43 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isRunning
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isWalkingRight
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isWalkingLeft
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isWalkingBackward
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isCrouching
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_DefaultBool: 1
+    m_Controller: {fileID: 0}
   - m_Name: isCrawling
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -454,9 +454,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.23460865
   m_TransitionOffset: 0
-  m_ExitTime: 0.97
+  m_ExitTime: 0.9700001
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
