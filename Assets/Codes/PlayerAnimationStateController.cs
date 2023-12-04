@@ -106,9 +106,11 @@ public class PlayerAnimationStateController : MonoBehaviour
         {
             // Toggle between crouching and standing
             isCrouching = !isCrouching;
+            isCrawling = !isCrawling;
 
             // Set the crouching parameter in the animator
             animator.SetBool("isCrouching", isCrouching);
+            animator.SetBool("isCrawling", false);
         }
 
         // initiate crawl Animation
@@ -116,9 +118,11 @@ public class PlayerAnimationStateController : MonoBehaviour
         {
             // Toggle between crouching and standing
             isCrawling = !isCrawling;
+            isCrouching = !isCrouching;
 
             // Set the crouching parameter in the animator
             animator.SetBool("isCrawling", isCrawling);
+            animator.SetBool("isCrouching", false);
         }
         
     }
