@@ -5,23 +5,37 @@ using UnityEngine;
 public class PlayerAnimationStateController : MonoBehaviour
 {
     Animator animator;
+    int isWalkingHash;
+    int isRunningHash;
+    int isWalkingRightHash;
+    int isWalkingLeftHash;
+    int isWalkingBackwardHash;
+    int isCrouchingHash;
+    int isCrawlingHash;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        isWalkingHash = Animator.StringToHash("isWalking");
+        isRunningHash = Animator.StringToHash("isRunning");
+        isWalkingRightHash = Animator.StringToHash("isWalkingRight");
+        isWalkingLeftHash = Animator.StringToHash("isWalkingLeft");
+        isWalkingBackwardHash = Animator.StringToHash("isWalkingBackward");
+        isCrouchingHash = Animator.StringToHash("isCrouching");
+        isCrawlingHash = Animator.StringToHash("isCrawling");
     }
 
     // Update is called once per frame
     void Update()
     {
-        bool isWalking = animator.GetBool("isWalking");
-        bool isrunning = animator.GetBool("isRunning");
-        bool isWalkingRight = animator.GetBool("isWalkingRight");
-        bool isWalkingLeft = animator.GetBool("isWalkingLeft");
-        bool isWalkingBackward = animator.GetBool("isWalkingBackward");
-        bool isCrouching = animator.GetBool("isCrouching");
-        bool isCrawling = animator.GetBool("isCrawling");
+        bool isWalking = animator.GetBool(isWalkingHash);
+        bool isrunning = animator.GetBool(isRunningHash);
+        bool isWalkingRight = animator.GetBool(isWalkingRightHash);
+        bool isWalkingLeft = animator.GetBool(isWalkingLeftHash);
+        bool isWalkingBackward = animator.GetBool(isWalkingBackwardHash);
+        bool isCrouching = animator.GetBool(isCrouchingHash);
+        bool isCrawling = animator.GetBool(isCrawlingHash);
 
         bool forwardPressed = Input.GetKey("w");
         bool backwardPressed = Input.GetKey("s");
@@ -106,6 +120,6 @@ public class PlayerAnimationStateController : MonoBehaviour
             // Set the crouching parameter in the animator
             animator.SetBool("isCrawling", isCrawling);
         }
-
+        
     }
 }
