@@ -28,8 +28,8 @@ public class PlayerAnimationStateController : MonoBehaviour
         bool runPressed = Input.GetKey("left shift");
         bool rightPressed = Input.GetKey("d");
         bool leftPressed = Input.GetKey("a");
-        bool crouchPressed = Input.GetKey("c");
-        bool crawlPressed = Input.GetKey("left ctrl");
+        bool crouchPressed = Input.GetKeyDown(KeyCode.C);
+        bool crawlPressed = Input.GetKeyDown(KeyCode.LeftControl);
 
         if (!isWalking && forwardPressed)
         {
