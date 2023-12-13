@@ -16,6 +16,6 @@ public class NewBehaviourScript : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
-        Debug.Log("Player Has Quite The Game");
+        Debug.Log("Player Has Quit The Game");
     }
 }
