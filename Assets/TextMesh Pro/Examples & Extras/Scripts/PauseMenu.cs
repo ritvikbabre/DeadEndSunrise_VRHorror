@@ -8,10 +8,13 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool Paused = false;
     public GameObject PauseMenuCanvas;
+    public bool cursorLocked = false;
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
+        Cursor.visible = false;
+        cursorLocked = true;
     }
 
     // Update is called once per frame
@@ -27,6 +30,9 @@ public class PauseMenu : MonoBehaviour
             {
                 Stop();
             }
+            if (cursorLocked)
+            { cursorLocked = false; Cursor.lockState = CursorLockMode.None; }
+            else { cursorLocked = true; Cursor.lockState = CursorLockMode.Locked; }
         }
     }
     void Stop()
@@ -34,12 +40,14 @@ public class PauseMenu : MonoBehaviour
         PauseMenuCanvas.SetActive(true);
         Time.timeScale = 0f;
         Paused = true;
+        Cursor.visible = true;
     }
     public void Play()
     {
         PauseMenuCanvas.SetActive(false);
         Time.timeScale = 1f;
         Paused = false;
+        Cursor.visible = false;
     }
 
     public void MainMenuButton()

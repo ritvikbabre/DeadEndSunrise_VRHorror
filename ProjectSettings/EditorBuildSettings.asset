@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: 278ccc786ce7d714c8c7e2b09b920504
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AnimationTestScene.unity
     guid: 6a9f39a27ad856d408dd2a1074274268
   m_configObjects: {}
