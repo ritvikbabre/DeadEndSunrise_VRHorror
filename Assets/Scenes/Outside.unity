@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenuCanvas: {fileID: 1117789346}
+  cursorLocked: 0
 --- !u!1001 &4601746
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2587,7 +2588,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &62314772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41790,12 +41791,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080352788}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 61.168716, y: 22.81493, z: 19.168468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1117789347}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1080411915
 PrefabInstance:
@@ -43434,6 +43435,7 @@ Transform:
   m_Children:
   - {fileID: 1974932390}
   - {fileID: 760210697}
+  - {fileID: 1080352791}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1118089318 stripped
@@ -46860,6 +46862,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   speed: 3
+  crouchSpeed: 2.5
+  crawlSpeed: 1.5
   GravityMultiplier: 3
 --- !u!143 &1207066385
 CharacterController:
@@ -46990,6 +46994,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29756d813dbb7c44da05dc56d835f1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  isCrouchingHash: 0
+  isCrawlingHash: 0
 --- !u!1 &1210089021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1723301469171122, guid: 3efad8ab4a9acbe409eb2b7c9b9acc93, type: 3}
@@ -89756,6 +89763,5 @@ SceneRoots:
   - {fileID: 2086936785}
   - {fileID: 719998756}
   - {fileID: 229208612}
-  - {fileID: 1080352791}
   - {fileID: 1117789347}
   - {fileID: 4018334}
