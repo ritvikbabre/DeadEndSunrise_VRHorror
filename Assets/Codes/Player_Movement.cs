@@ -55,17 +55,24 @@ public class Player_Movement : MonoBehaviour
         }
         else
         {
-            speed = 5f;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = 10f;
+            }
+            else
+            {
+                speed = 5f;
+            }
         }
 
         controller.Move(move*speed*Time.deltaTime);
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        /*if (Input.GetKey(KeyCode.LeftShift))
         {
             speed = speed*2;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed /= 2;
-        }
+        } */
     }
 }
