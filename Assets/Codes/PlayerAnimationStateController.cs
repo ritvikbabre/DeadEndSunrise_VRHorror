@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerAnimationStateController : MonoBehaviour
 {
-    Animator animator;
+    public Animator animator;
     int isWalkingHash;
     int isRunningHash;
     int isWalkingRightHash;
     int isWalkingLeftHash;
     int isWalkingBackwardHash;
-    int isCrouchingHash;
-    int isCrawlingHash;
+    public int isCrouchingHash;
+    public int isCrawlingHash;
 
     // Start is called before the first frame update
     void Start()
