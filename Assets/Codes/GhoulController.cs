@@ -59,7 +59,6 @@ public class GhoulController : MonoBehaviour
             }
             yield return new WaitForSeconds(0.1f);
         }
-        print("Chasing");
     }
 
     public IEnumerator AttackState()
@@ -71,7 +70,6 @@ public class GhoulController : MonoBehaviour
                 ChangeState(AISTATE.CHASE);
                 yield break;
             }
-            print("Attacking");
             yield return new WaitForSeconds(0.1f);
         }
     }
@@ -86,7 +84,6 @@ public class GhoulController : MonoBehaviour
                 currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
                 enemy.SetDestination(currentWaypoint.position);
             }
-            print("Patrolling");
             yield return new WaitForSeconds(0.1f);
         }
     }
