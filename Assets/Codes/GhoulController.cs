@@ -18,8 +18,42 @@ public class GhoulController : MonoBehaviour
     public void Start()
     {
         currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
-        StartCoroutine(PatrolState());
+        ChangeState(AISTATE.PATROL);
     }
+
+    public void ChangeState(AISTATE newState)
+    {
+        StopAllCoroutines();
+        enemyState = newState;
+
+        switch (enemyState)
+        {
+            case AISTATE.PATROL:
+                StartCoroutine(PatrolState());
+                break;
+            case AISTATE.CHASE:
+                StartCoroutine(ChaseState());
+                break;
+            case AISTATE.ATTACK:
+                StartCoroutine(AttackState());
+                break;
+        }
+    }
+
+    public IEnumerator ChaseState()
+    {
+        while (enemyState == AISTATE.CHASE)
+        {
+            enemy.SetDestination(player.position);
+            yield return null;
+        }
+    }
+
+    public IEnumerator AttackState()
+    {
+        yield break;
+    }
+
     public IEnumerator PatrolState()
     { 
         
@@ -35,9 +69,12 @@ public class GhoulController : MonoBehaviour
         }
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ChangeState(AISTATE.CHASE);
+        }
+    }
+    }
 
-
-
-
-
-}
