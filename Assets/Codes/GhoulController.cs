@@ -45,12 +45,30 @@ public class GhoulController : MonoBehaviour
         while (enemyState == AISTATE.CHASE)
         {
             enemy.SetDestination(player.position);
+            while (enemyState == AISTATE.CHASE)
+            {
+                if (Vector3.Distance(transform.position, player.position) < distanceOffset)
+                {
+                    ChangeState(AISTATE.ATTACK);
+                    yield break;
+                }
+            }
             yield return null;
         }
     }
 
     public IEnumerator AttackState()
     {
+        while (enemyState == AISTATE.ATTACK)
+        {
+            if (Vector3.Distance(transform.position, player.position) > distanceOffset)
+            {
+                ChangeState(AISTATE.CHASE);
+                yield break;
+            }
+            print("Attacking");
+            yield return null;
+        }
         yield break;
     }
 
