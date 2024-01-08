@@ -11,6 +11,7 @@ public class GhoulController : MonoBehaviour
     public NavMeshAgent enemy;
     public AISTATE enemyState = AISTATE.PATROL;
     float distanceOffset = 2.0f;
+    float chaseDistance = 10.0f; // Add a chase distance
 
     public List<Transform> waypoints = new List<Transform>();
     Transform currentWaypoint;
@@ -50,7 +51,13 @@ public class GhoulController : MonoBehaviour
                 ChangeState(AISTATE.ATTACK);
                 yield break;
             }
-            yield return null;
+            // If player outruns enemy, go back to patrol state
+            if (Vector3.Distance(transform.position, player.position) > chaseDistance)
+            {
+                ChangeState(AISTATE.PATROL);
+                yield break;
+            }
+            yield return new WaitForSeconds(0.1f);
         }
         print("Chasing");
     }
@@ -89,6 +96,14 @@ public class GhoulController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             ChangeState(AISTATE.CHASE);
+        }
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ChangeState(AISTATE.PATROL);
         }
     }
 }
