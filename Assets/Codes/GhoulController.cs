@@ -53,6 +53,7 @@ public class GhoulController : MonoBehaviour
                     yield break;
                 }
             }
+            print("Chasing");
             yield return null;
         }
     }
@@ -83,6 +84,7 @@ public class GhoulController : MonoBehaviour
                 currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
                 enemy.SetDestination(currentWaypoint.position);
             }
+            print("Patrolling");
             yield return null;
         }
     }
