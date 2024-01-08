@@ -42,20 +42,17 @@ public class GhoulController : MonoBehaviour
 
     public IEnumerator ChaseState()
     {
+        enemy.SetDestination(player.position);
         while (enemyState == AISTATE.CHASE)
         {
-            enemy.SetDestination(player.position);
-            while (enemyState == AISTATE.CHASE)
+            if (Vector3.Distance(transform.position, player.position) < distanceOffset)
             {
-                if (Vector3.Distance(transform.position, player.position) < distanceOffset)
-                {
-                    ChangeState(AISTATE.ATTACK);
-                    yield break;
-                }
+                ChangeState(AISTATE.ATTACK);
+                yield break;
             }
-            print("Chasing");
             yield return null;
         }
+        print("Chasing");
     }
 
     public IEnumerator AttackState()
@@ -68,14 +65,12 @@ public class GhoulController : MonoBehaviour
                 yield break;
             }
             print("Attacking");
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
         }
-        yield break;
     }
 
     public IEnumerator PatrolState()
-    { 
-        
+    {
         while (enemyState == AISTATE.PATROL)
         {
             enemy.SetDestination(currentWaypoint.position);
@@ -85,7 +80,7 @@ public class GhoulController : MonoBehaviour
                 enemy.SetDestination(currentWaypoint.position);
             }
             print("Patrolling");
-            yield return null;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
@@ -96,5 +91,5 @@ public class GhoulController : MonoBehaviour
             ChangeState(AISTATE.CHASE);
         }
     }
-    }
+}
 
