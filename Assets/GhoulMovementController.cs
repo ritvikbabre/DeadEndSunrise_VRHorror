@@ -47,10 +47,10 @@ public class GhoulController : MonoBehaviour
 
     public IEnumerator ChaseState()
     {
-        // Set the destination of the Ghoul to the player's position
-        enemy.SetDestination(player.position);
         while (enemyState == AISTATE.CHASE)
         {
+            // Update the destination of the Ghoul to the player's position in each frame
+            enemy.SetDestination(player.position);
             // If the player is within the distance offset, switch to Attack state
             if (Vector3.Distance(transform.position, player.position) < distanceOffset)
             {
@@ -63,7 +63,7 @@ public class GhoulController : MonoBehaviour
                 ChangeState(AISTATE.PATROL);
                 yield break;
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return null; // Wait for the next frame
         }
     }
 
@@ -78,7 +78,7 @@ public class GhoulController : MonoBehaviour
                 ChangeState(AISTATE.CHASE);
                 yield break;
             }
-            yield return new WaitForSeconds(0.1f);
+            yield return null;
         }
     }
 
@@ -95,7 +95,13 @@ public class GhoulController : MonoBehaviour
                 currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
                 enemy.SetDestination(currentWaypoint.position);
             }
-            yield return new WaitForSeconds(0.1f);
+            // If the player is within the chase distance, switch to Chase state
+            if (Vector3.Distance(transform.position, player.position) < chaseDistance)
+            {
+                ChangeState(AISTATE.CHASE);
+                yield break;
+            }
+            yield return null;
         }
     }
 
