@@ -52,6 +52,7 @@ public class GhoulController : MonoBehaviour
 
     public IEnumerator ChaseState()
     {
+        print("Chasing");
         while (enemyState == AISTATE.CHASE)
         {
             // Update the destination of the Ghoul to the player's position in each frame
@@ -75,6 +76,7 @@ public class GhoulController : MonoBehaviour
     // Coroutine for the Attack state
     public IEnumerator AttackState()
     {
+        print("Attacking");
         while (enemyState == AISTATE.ATTACK)
         {
             // If the player moves out of the distance offset, switch back to Chase state
@@ -90,6 +92,7 @@ public class GhoulController : MonoBehaviour
     // Coroutine for the Patrol state
     public IEnumerator PatrolState()
     {
+        print("Patrolling");
         while (enemyState == AISTATE.PATROL)
         {
             // Set the destination of the Ghoul to the current waypoint's position
@@ -115,6 +118,7 @@ public class GhoulController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             ChangeState(AISTATE.CHASE);
+            print("Player Detected");
         }
     }
 
@@ -123,6 +127,7 @@ public class GhoulController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             ChangeState(AISTATE.PATROL);
+            print("Player Lost");
         }
     }
 }
