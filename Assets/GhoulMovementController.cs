@@ -11,6 +11,7 @@ public class GhoulController : MonoBehaviour
 
     public Transform player;
     public NavMeshAgent enemy;
+    private new Animation animation;
     public AISTATE enemyState = AISTATE.PATROL; // Current state of the Ghoul
     float distanceOffset = 2.0f; // Distance offset for various calculations
     float chaseDistance = 10.0f; // Distance at which the Ghoul will start chasing the player
@@ -20,6 +21,7 @@ public class GhoulController : MonoBehaviour
 
     public void Start()
     {
+        animation = GetComponent<Animation>(); 
         currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
         ChangeState(AISTATE.PATROL);
     }
@@ -35,12 +37,15 @@ public class GhoulController : MonoBehaviour
         {
             case AISTATE.PATROL:
                 StartCoroutine(PatrolState());
+                animation.Play("Walk");
                 break;
             case AISTATE.CHASE:
                 StartCoroutine(ChaseState());
+                animation.Play("Run");
                 break;
             case AISTATE.ATTACK:
                 StartCoroutine(AttackState());
+                animation.Play("Attack2");
                 break;
         }
     }
