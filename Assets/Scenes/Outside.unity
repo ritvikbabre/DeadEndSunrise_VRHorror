@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0, g: 0.1349945, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 33ca52261264d6b49ae52ee43c6130ae, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4409201, g: 0.4820823, b: 0.5289676, a: 1}
+  m_IndirectSpecularColor: {r: 0.01624039, g: 0.01472227, b: 0.0138980355, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -73849,6 +73849,10 @@ PrefabInstance:
       value: character
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 24c880e8749271e43b3727e27979757f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24c880e8749271e43b3727e27979757f, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -80600,7 +80604,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.89
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -80658,13 +80662,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942564437}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.123358265, y: -0.047563992, z: -0.2724308, w: 0.95304877}
+  m_LocalRotation: {x: 0.58437747, y: 0.32455793, z: -0.45233142, w: 0.590391}
   m_LocalPosition: {x: -10.44, y: 20.53, z: 18.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 167.924, y: -189.291, z: -212.89}
+  m_LocalEulerAnglesHint: {x: 100.379, y: -233.828, z: -300.783}
 --- !u!1 &1943498137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1249719923872594, guid: 4b8a8bbd55976a7498ab510ac9376edc, type: 3}
