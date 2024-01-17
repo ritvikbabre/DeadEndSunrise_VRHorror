@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 142dd03d14cd95c4abfd1fe2599db035
+guid: 7faeb8f658b865f49b78d7278a32579b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: bear_diffuse
-    second: {fileID: 2800000, guid: ce4f169c65e37cb46b9af1bbf63ad12f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: bear_normal
-    second: {fileID: 2800000, guid: cda589f36d4a1fd48b6f02a357c6a2f8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: bear_specular
-    second: {fileID: 2800000, guid: 0f7a18ac62ff4b64b80621c2c6a49d68, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
