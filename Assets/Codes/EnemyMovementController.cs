@@ -4,14 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class GhoulController : MonoBehaviour
+public class EnemyAI_StateController : MonoBehaviour
 {
 
     public enum AISTATE { PATROL, CHASE, ATTACK };
 
     public Transform player;
     public NavMeshAgent enemy;
-    private new Animation animation;
     public AISTATE enemyState = AISTATE.PATROL; // Current state of the Ghoul
     float distanceOffset = 2.0f; // Distance offset for various calculations
     float chaseDistance = 10.0f; // Distance at which the Ghoul will start chasing the player
@@ -19,9 +18,9 @@ public class GhoulController : MonoBehaviour
     public List<Transform> waypoints = new List<Transform>();
     Transform currentWaypoint; // Current waypoint the Ghoul is moving towards
 
+
     public void Start()
     {
-        animation = GetComponent<Animation>(); 
         currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
         ChangeState(AISTATE.PATROL);
     }
@@ -37,15 +36,12 @@ public class GhoulController : MonoBehaviour
         {
             case AISTATE.PATROL:
                 StartCoroutine(PatrolState());
-                animation.Play("Walk");
                 break;
             case AISTATE.CHASE:
                 StartCoroutine(ChaseState());
-                animation.Play("Run");
                 break;
             case AISTATE.ATTACK:
                 StartCoroutine(AttackState());
-                animation.Play("Attack2");
                 break;
         }
     }
@@ -83,6 +79,8 @@ public class GhoulController : MonoBehaviour
             if (Vector3.Distance(transform.position, player.position) > distanceOffset)
             {
                 ChangeState(AISTATE.CHASE);
+                enemy.stoppingDistance = 2.0f;
+                enemy.SetDestination(player.position);
                 yield break;
             }
             yield return null;
@@ -127,8 +125,7 @@ public class GhoulController : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             ChangeState(AISTATE.PATROL);
-            print("Player Lost");
+            print("Player is Lost");
         }
     }
 }
-
