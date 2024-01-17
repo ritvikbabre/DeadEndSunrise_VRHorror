@@ -98,6 +98,7 @@ public class EnemyAI_StateController : MonoBehaviour
         while (enemyState == AISTATE.PATROL)
         {
             enemyAnimator.SetBool("IsAttacking", false);
+            enemyAnimator.SetBool("IsChasing", false);
 
             enemy.SetDestination(currentWaypoint.position);
 
