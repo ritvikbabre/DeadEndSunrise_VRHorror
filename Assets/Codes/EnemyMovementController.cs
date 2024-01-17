@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class GhoulController : MonoBehaviour
+public class EnemyAI_StateController : MonoBehaviour
 {
 
     public enum AISTATE { PATROL, CHASE, ATTACK };
@@ -17,6 +17,7 @@ public class GhoulController : MonoBehaviour
 
     public List<Transform> waypoints = new List<Transform>();
     Transform currentWaypoint; // Current waypoint the Ghoul is moving towards
+
 
     public void Start()
     {
@@ -78,6 +79,7 @@ public class GhoulController : MonoBehaviour
             if (Vector3.Distance(transform.position, player.position) > distanceOffset)
             {
                 ChangeState(AISTATE.CHASE);
+                enemy.stoppingDistance = 2.0f;
                 enemy.SetDestination(player.position);
                 yield break;
             }

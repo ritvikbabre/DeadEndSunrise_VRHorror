@@ -27472,6 +27472,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4948067114806054, guid: b2cb73633387103498011058f1e7ff2d, type: 3}
   m_PrefabInstance: {fileID: 672140189}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &673675639 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8453435046830524555, guid: 1898e271693e6cc4dbbf84c03c001074, type: 3}
+  m_PrefabInstance: {fileID: 2742199535760629831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &675637965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31233,6 +31238,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69ad7ab425735ba499dcbfa3c3b7e922, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815129890}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 69ad7ab425735ba499dcbfa3c3b7e922, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 815129893}
   m_SourcePrefab: {fileID: 100100000, guid: 69ad7ab425735ba499dcbfa3c3b7e922, type: 3}
 --- !u!1 &815129889 stripped
 GameObject:
@@ -31254,7 +31262,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -31269,7 +31277,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 815129889}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.85
+  m_Radius: 1.14
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -31301,10 +31309,38 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.85
+  m_Radius: 1.11
   m_Height: 2.64
   m_Direction: 1
   m_Center: {x: 0, y: 1.16, z: 0}
+--- !u!114 &815129893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815129889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb72dfd3291850478d5e5c51e8363c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 673675639}
+  enemy: {fileID: 815129891}
+  enemyState: 0
+  waypoints:
+  - {fileID: 1797860630}
+  - {fileID: 1314293747}
+  - {fileID: 1088355923}
+  - {fileID: 1657984019}
+  - {fileID: 51694021}
+  - {fileID: 1857816413}
+  - {fileID: 1187303248}
+  - {fileID: 1394533590}
+  - {fileID: 1813445999}
+  - {fileID: 1388729195}
+  - {fileID: 1363802575}
+  - {fileID: 1143956235}
 --- !u!1001 &816732658
 PrefabInstance:
   m_ObjectHideFlags: 0
