@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
 public class EnemyAI_StateController : MonoBehaviour
 {
-
     public enum AISTATE { PATROL, CHASE, ATTACK };
 
     public Transform player;
     public NavMeshAgent enemy;
-    public AISTATE enemyState = AISTATE.PATROL; // Current state of the Ghoul
-    float distanceOffset = 2.0f; // Distance offset for various calculations
-    float chaseDistance = 10.0f; // Distance at which the Ghoul will start chasing the player
+    public AISTATE enemyState = AISTATE.PATROL;
+    float distanceOffset = 2.0f;
+    float chaseDistance = 10.0f;
 
     public List<Transform> waypoints = new List<Transform>();
-    Transform currentWaypoint; // Current waypoint the Ghoul is moving towards
+    Transform currentWaypoint;
 
+    public Animator enemyAnimator;
 
     public void Start()
     {
@@ -31,16 +30,19 @@ public class EnemyAI_StateController : MonoBehaviour
         StopAllCoroutines();
         enemyState = newState;
 
-        // Start the coroutine corresponding to the new state
+        // Set trigger in Animator
         switch (enemyState)
         {
             case AISTATE.PATROL:
+                enemyAnimator.SetBool("IsPatrolling", true);
                 StartCoroutine(PatrolState());
                 break;
             case AISTATE.CHASE:
+                enemyAnimator.SetBool("IsChasing", true);
                 StartCoroutine(ChaseState());
                 break;
             case AISTATE.ATTACK:
+                enemyAnimator.SetBool("IsAttacking", true);
                 StartCoroutine(AttackState());
                 break;
         }
@@ -51,31 +53,33 @@ public class EnemyAI_StateController : MonoBehaviour
         print("Chasing");
         while (enemyState == AISTATE.CHASE)
         {
-            // Update the destination of the Ghoul to the player's position in each frame
+            enemyAnimator.SetBool("IsPatrolling", false);
+
             enemy.SetDestination(player.position);
-            // If the player is within the distance offset, switch to Attack state
+
             if (Vector3.Distance(transform.position, player.position) < distanceOffset)
             {
                 ChangeState(AISTATE.ATTACK);
                 yield break;
             }
-            // If the player is too far away, switch back to Patrol state
+
             if (Vector3.Distance(transform.position, player.position) > chaseDistance)
             {
                 ChangeState(AISTATE.PATROL);
                 yield break;
             }
-            yield return null; // Wait for the next frame
+
+            yield return null;
         }
     }
 
-    // Coroutine for the Attack state
     public IEnumerator AttackState()
     {
         print("Attacking");
         while (enemyState == AISTATE.ATTACK)
         {
-            // If the player moves out of the distance offset, switch back to Chase state
+            enemyAnimator.SetBool("IsChasing", false);
+
             if (Vector3.Distance(transform.position, player.position) > distanceOffset)
             {
                 ChangeState(AISTATE.CHASE);
@@ -83,30 +87,33 @@ public class EnemyAI_StateController : MonoBehaviour
                 enemy.SetDestination(player.position);
                 yield break;
             }
+
             yield return null;
         }
     }
 
-    // Coroutine for the Patrol state
     public IEnumerator PatrolState()
     {
         print("Patrolling");
         while (enemyState == AISTATE.PATROL)
         {
-            // Set the destination of the Ghoul to the current waypoint's position
+            enemyAnimator.SetBool("IsAttacking", false);
+            enemyAnimator.SetBool("IsChasing", false);
+
             enemy.SetDestination(currentWaypoint.position);
-            // If the Ghoul reaches the current waypoint, select a new random waypoint
+
             if (Vector3.Distance(transform.position, currentWaypoint.position) < distanceOffset)
             {
                 currentWaypoint = waypoints[Random.Range(0, waypoints.Count)];
                 enemy.SetDestination(currentWaypoint.position);
             }
-            // If the player is within the chase distance, switch to Chase state
+
             if (Vector3.Distance(transform.position, player.position) < chaseDistance)
             {
                 ChangeState(AISTATE.CHASE);
                 yield break;
             }
+
             yield return null;
         }
     }
