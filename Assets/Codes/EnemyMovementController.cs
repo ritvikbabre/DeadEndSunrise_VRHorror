@@ -12,6 +12,8 @@ public class EnemyAI_StateController : MonoBehaviour
     public AISTATE enemyState = AISTATE.PATROL;
     float distanceOffset = 2.0f;
     float chaseDistance = 10.0f;
+    public float speed = 3f;
+
 
     public List<Transform> waypoints = new List<Transform>();
     Transform currentWaypoint;
@@ -56,6 +58,8 @@ public class EnemyAI_StateController : MonoBehaviour
             enemyAnimator.SetBool("IsPatrolling", false);
 
             enemy.SetDestination(player.position);
+
+            speed = 5.0f;
 
             if (Vector3.Distance(transform.position, player.position) < distanceOffset)
             {
