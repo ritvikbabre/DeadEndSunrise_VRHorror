@@ -9,7 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     //load Game
     public void NewGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     } 
 
     //Quit Game
