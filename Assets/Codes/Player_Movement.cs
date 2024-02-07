@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Player_Movement : MonoBehaviour
+public class Player_Movement : MonoBehaviour , Player_movement_input_action.IPlayer_movementActions
 {
-
+    private Player_movement_input_action player_input;
     public CharacterController controller;
 
     public float speed = 5f;
@@ -19,6 +20,9 @@ public class Player_Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player_input = new Player_movement_input_action();
+        player_input.Enable();
+        player_input.player_movement.SetCallbacks(this);
         controller = GetComponent<CharacterController>();
         animationStateController = GetComponent<PlayerAnimationStateController>(); // Get the PlayerAnimationStateController component
     }
@@ -74,5 +78,30 @@ public class Player_Movement : MonoBehaviour
         {
             speed /= 2;
         } */
+    }
+
+    public void OnCrouch(InputAction.CallbackContext context)
+    {
+
+    }
+
+    public void OnMovement(InputAction.CallbackContext context)
+    {
+        
+    }
+
+    void Player_movement_input_action.IPlayer_movementActions.OnCrouch(InputAction.CallbackContext context)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    void Player_movement_input_action.IPlayer_movementActions.OnMovement(InputAction.CallbackContext context)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    void Player_movement_input_action.IPlayer_movementActions.OnInventory(InputAction.CallbackContext context)
+    {
+        throw new System.NotImplementedException();
     }
 }
