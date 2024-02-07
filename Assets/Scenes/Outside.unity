@@ -391,6 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25ab84a968ad2049b75e39c7e56ff48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  slotHolder: {fileID: 0}
 --- !u!114 &1216209939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,6 +405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25ab84a968ad2049b75e39c7e56ff48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  slotHolder: {fileID: 0}
 --- !u!1001 &1428509732
 PrefabInstance:
   m_ObjectHideFlags: 0
