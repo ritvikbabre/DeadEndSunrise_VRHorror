@@ -1,0 +1,339 @@
+fileFormatVersion: 2
+guid: fb82d87824b2eaa4d951f74c17e2d56b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014vector auto parts_1013019_0"
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 869
+        width: 390
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc3754dfa9e9804e8d91ac7d094731b
+      internalID: -2037520493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014vector auto parts_1013019_1"
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 831
+        width: 432
+        height: 317
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86825f5a11848041bef0376439f425b
+      internalID: 1701117972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014vector auto parts_1013019_2"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 462
+        width: 485
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac01068ed33aae04982b63064a4d45f4
+      internalID: -603236970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014vector auto parts_1013019_8"
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 107
+        width: 404
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d669554026898544a88674bcf9ad98f9
+      internalID: -610683330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014vector auto parts_1013019_11"
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 111
+        width: 315
+        height: 341
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397c89f4a7ad48940a4f362dea2f8288
+      internalID: -1942622885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014vector auto parts_1013019_17"
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 180
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3176520de19ecf1419c1b0ee9af571ec
+      internalID: 2018889693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ded7734108bb49b41a7f5b9395584a9b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "\u2014Pngtree\u2014vector auto parts_1013019_0": -2037520493
+      "\u2014Pngtree\u2014vector auto parts_1013019_1": 1701117972
+      "\u2014Pngtree\u2014vector auto parts_1013019_10": 407915951
+      "\u2014Pngtree\u2014vector auto parts_1013019_11": -1942622885
+      "\u2014Pngtree\u2014vector auto parts_1013019_12": 950602872
+      "\u2014Pngtree\u2014vector auto parts_1013019_13": -1574900165
+      "\u2014Pngtree\u2014vector auto parts_1013019_14": -2134723783
+      "\u2014Pngtree\u2014vector auto parts_1013019_15": 1981609725
+      "\u2014Pngtree\u2014vector auto parts_1013019_16": -321719243
+      "\u2014Pngtree\u2014vector auto parts_1013019_17": 2018889693
+      "\u2014Pngtree\u2014vector auto parts_1013019_18": 1348191596
+      "\u2014Pngtree\u2014vector auto parts_1013019_19": -631320797
+      "\u2014Pngtree\u2014vector auto parts_1013019_2": -603236970
+      "\u2014Pngtree\u2014vector auto parts_1013019_20": 1801013878
+      "\u2014Pngtree\u2014vector auto parts_1013019_21": -2105641264
+      "\u2014Pngtree\u2014vector auto parts_1013019_22": 1566168948
+      "\u2014Pngtree\u2014vector auto parts_1013019_23": 344236161
+      "\u2014Pngtree\u2014vector auto parts_1013019_24": 1633676140
+      "\u2014Pngtree\u2014vector auto parts_1013019_25": 1802105965
+      "\u2014Pngtree\u2014vector auto parts_1013019_26": -92471317
+      "\u2014Pngtree\u2014vector auto parts_1013019_27": 1214766653
+      "\u2014Pngtree\u2014vector auto parts_1013019_28": 1298664275
+      "\u2014Pngtree\u2014vector auto parts_1013019_29": -1322488695
+      "\u2014Pngtree\u2014vector auto parts_1013019_3": 471513722
+      "\u2014Pngtree\u2014vector auto parts_1013019_30": 2117329766
+      "\u2014Pngtree\u2014vector auto parts_1013019_31": 1762935688
+      "\u2014Pngtree\u2014vector auto parts_1013019_32": -1445806525
+      "\u2014Pngtree\u2014vector auto parts_1013019_33": 1779069833
+      "\u2014Pngtree\u2014vector auto parts_1013019_34": -653050488
+      "\u2014Pngtree\u2014vector auto parts_1013019_35": -1780926012
+      "\u2014Pngtree\u2014vector auto parts_1013019_36": -1600824856
+      "\u2014Pngtree\u2014vector auto parts_1013019_37": 739995374
+      "\u2014Pngtree\u2014vector auto parts_1013019_38": 441398487
+      "\u2014Pngtree\u2014vector auto parts_1013019_39": -1088254180
+      "\u2014Pngtree\u2014vector auto parts_1013019_4": 493227508
+      "\u2014Pngtree\u2014vector auto parts_1013019_40": -1018040284
+      "\u2014Pngtree\u2014vector auto parts_1013019_41": 2133182649
+      "\u2014Pngtree\u2014vector auto parts_1013019_42": -281808440
+      "\u2014Pngtree\u2014vector auto parts_1013019_43": 377438935
+      "\u2014Pngtree\u2014vector auto parts_1013019_44": 1205536278
+      "\u2014Pngtree\u2014vector auto parts_1013019_45": 1312676087
+      "\u2014Pngtree\u2014vector auto parts_1013019_46": -682291812
+      "\u2014Pngtree\u2014vector auto parts_1013019_47": 1871661432
+      "\u2014Pngtree\u2014vector auto parts_1013019_48": 1215626752
+      "\u2014Pngtree\u2014vector auto parts_1013019_49": 13696488
+      "\u2014Pngtree\u2014vector auto parts_1013019_5": 1892228540
+      "\u2014Pngtree\u2014vector auto parts_1013019_50": -1189521375
+      "\u2014Pngtree\u2014vector auto parts_1013019_51": -83870448
+      "\u2014Pngtree\u2014vector auto parts_1013019_52": 649742476
+      "\u2014Pngtree\u2014vector auto parts_1013019_53": -873411616
+      "\u2014Pngtree\u2014vector auto parts_1013019_54": 180099084
+      "\u2014Pngtree\u2014vector auto parts_1013019_55": -582953352
+      "\u2014Pngtree\u2014vector auto parts_1013019_56": 1385182058
+      "\u2014Pngtree\u2014vector auto parts_1013019_57": -122331477
+      "\u2014Pngtree\u2014vector auto parts_1013019_58": -1893004463
+      "\u2014Pngtree\u2014vector auto parts_1013019_59": 1593149517
+      "\u2014Pngtree\u2014vector auto parts_1013019_6": -1566828163
+      "\u2014Pngtree\u2014vector auto parts_1013019_7": 250256361
+      "\u2014Pngtree\u2014vector auto parts_1013019_8": -610683330
+      "\u2014Pngtree\u2014vector auto parts_1013019_9": 213192431
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
