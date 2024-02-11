@@ -31,7 +31,6 @@ MonoBehaviour:
   - {fileID: 5141329839326359488}
   m_renderMode: 1
   m_depthSubmissionMode: 0
-  m_symmetricProjection: 0
 --- !u!114 &-8866577171236483116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +100,6 @@ MonoBehaviour:
   - {fileID: 462367322139385579}
   m_renderMode: 1
   m_depthSubmissionMode: 0
-  m_symmetricProjection: 0
 --- !u!114 &-7046986868363603096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,6 +160,21 @@ MonoBehaviour:
   company: Unity
   priority: 0
   required: 0
+--- !u!114 &-6114257927245530534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a1f07dc5afe854f9f12a4194aca3fb, type: 3}
+  m_Name: WebGL
+  m_EditorClassIdentifier: 
+  features: []
+  m_renderMode: 1
+  m_depthSubmissionMode: 0
 --- !u!114 &-5875823672005212448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,11 +390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0ebc320a151d3408ea1e9fce54d40e, type: 3}
   m_Name: OpenXR Package Settings
   m_EditorClassIdentifier: 
-  Keys: 010000000400000007000000
+  Keys: 0100000004000000070000000d000000
   Values:
   - {fileID: -9066681172458817081}
   - {fileID: 4983436350183344500}
   - {fileID: -8133398977655958579}
+  - {fileID: -6114257927245530534}
 --- !u!114 &462367322139385579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,7 +560,6 @@ MonoBehaviour:
   features: []
   m_renderMode: 1
   m_depthSubmissionMode: 0
-  m_symmetricProjection: 0
 --- !u!114 &5141329839326359488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,11 +630,7 @@ MonoBehaviour:
   - visibleName: Quest Pro
     manifestName: cambria
     enabled: 1
-  forceRemoveInternetPermission: 0
-  symmetricProjection: 0
-  systemSplashScreen: {fileID: 0}
-  lateLatchingMode: 0
-  lateLatchingDebug: 0
+  forceRemoveInternetPermission: 1
 --- !u!114 &6721121746157162756
 MonoBehaviour:
   m_ObjectHideFlags: 0
