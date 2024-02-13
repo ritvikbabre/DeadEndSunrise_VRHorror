@@ -27,7 +27,6 @@ Material:
   m_ValidKeywords:
   - _NORMALMAP
   - _OCCLUSIONMAP
-  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
