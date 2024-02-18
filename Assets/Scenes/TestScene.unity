@@ -10551,17 +10551,6 @@ PrefabInstance:
       value: PRESS 'x TO INTERACT'
       objectReference: {fileID: 0}
     - target: {fileID: 4386315122388349800, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
-<<<<<<< Updated upstream
-=======
-      propertyPath: PickUpMessage
-      value: 
-      objectReference: {fileID: 5235790173542198590, guid: 6f379b85926f26c44b55400c3decd792, type: 3}
-    - target: {fileID: 4386315122388349800, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
-      propertyPath: interactCanvas
-      value: 
-      objectReference: {fileID: 5235790173542198590, guid: 6f379b85926f26c44b55400c3decd792, type: 3}
-    - target: {fileID: 4386315122388349800, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
->>>>>>> Stashed changes
       propertyPath: itemLayer.m_Bits
       value: 0
       objectReference: {fileID: 0}
