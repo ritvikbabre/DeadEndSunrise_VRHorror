@@ -248,7 +248,7 @@
     },
     "com.unity.xr.management": {
       "version": "4.4.0",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.subsystems": "1.0.0",
@@ -257,15 +257,6 @@
         "com.unity.xr.legacyinputhelpers": "2.1.7"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.xr.mock-hmd": {
-      "version": "https://github.com/needle-mirror/com.unity.xr.mock-hmd.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.xr.management": "4.0.1"
-      },
-      "hash": "ee35627a6e3f7f5298b96cc9907f845be2c20986"
     },
     "com.unity.xr.oculus": {
       "version": "4.0.0",
