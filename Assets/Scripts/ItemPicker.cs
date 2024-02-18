@@ -10,7 +10,7 @@ public class ItemPicker : MonoBehaviour
     [SerializeField] private float pickUpRange;
     [SerializeField] private LayerMask itemLayer;
     [SerializeField] private GameObject camera;
-    [SerializeField] private Canvas interactCanvas;
+    [SerializeField] private Canvas PickUpMessage;
     [SerializeField] private TextMeshProUGUI interactText;
     [SerializeField] private string DisplayString;
     [SerializeField] private bool canPickUp;
@@ -19,7 +19,7 @@ public class ItemPicker : MonoBehaviour
     private void Start()
     {
         _playerInput = GetComponent<PlayerInput>();
-        interactCanvas.enabled = false;
+        PickUpMessage.enabled = false;
     }
     // Update is called once per frame
     void Update()
@@ -33,8 +33,8 @@ public class ItemPicker : MonoBehaviour
         if (other.gameObject.CompareTag("item"))
         {
             Debug.Log(other);
-            interactCanvas.transform.position = other.transform.position + Vector3.up; // Position the canvas above the item
-            interactCanvas.enabled = true;
+            PickUpMessage.transform.position = other.transform.position + Vector3.up; // Position the canvas above the item
+            PickUpMessage.enabled = true;
             interactText.text = DisplayString;
 
             canPickUp = true;
@@ -45,7 +45,7 @@ public class ItemPicker : MonoBehaviour
     {
         if (other.gameObject.CompareTag("item"))
         {
-            interactCanvas.enabled = false;
+            PickUpMessage.enabled = false;
             interactText.text = null;
             canPickUp = false;
         }
@@ -64,7 +64,7 @@ public class ItemPicker : MonoBehaviour
             {
 
                 itemPickUp.PickUP();
-                interactCanvas.enabled = false;
+                PickUpMessage.enabled = false;
                 interactText.text = null;
             }
         }
