@@ -3,7 +3,10 @@ guid: 6958a8d4bb7f56f4ea3452a594e63b61
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - camera: {instanceID: 0}
+  - interactCanvas: {instanceID: 0}
+  - interactText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
