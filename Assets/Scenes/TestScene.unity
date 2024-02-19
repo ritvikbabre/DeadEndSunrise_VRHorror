@@ -10434,6 +10434,10 @@ PrefabInstance:
       propertyPath: Inventory
       value: 
       objectReference: {fileID: 495627958}
+    - target: {fileID: 6170605232912217589, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
+      propertyPath: torchEnabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6303020826350815583, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: interactText
       value: 
