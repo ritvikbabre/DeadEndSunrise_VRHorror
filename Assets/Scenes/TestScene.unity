@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.08994619, g: 0.09353716, b: 0.14922673, a: 1}
+  m_IndirectSpecularColor: {r: 0.00837791, g: 0.00887304, b: 0.019083029, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 20.7
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -1845,7 +1845,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8aecd859a4d2ce540b369da36171e5e6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 436.1
+      value: 456.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8aecd859a4d2ce540b369da36171e5e6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1853,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8aecd859a4d2ce540b369da36171e5e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 128.46
+      value: 96.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8aecd859a4d2ce540b369da36171e5e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10470,7 +10470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 454.765
+      value: 475.265
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10478,7 +10478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 62.727
+      value: 31.166996
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10576,6 +10576,10 @@ PrefabInstance:
       propertyPath: Inventory
       value: 
       objectReference: {fileID: 495627958}
+    - target: {fileID: 6170605232912217589, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
+      propertyPath: JumpTimeout
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6170605232912217589, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: torchEnabled
       value: 0

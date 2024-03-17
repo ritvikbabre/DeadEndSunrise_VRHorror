@@ -14,9 +14,9 @@ public class ObjectSpawner : MonoBehaviour
 
 
 
-    public Transform[] tyrespawnPoints; 
-    public Transform[] fuelCanspawnPoints; 
-    public Transform[] airFilterspawnPoints; 
+    public List<Transform> tyrespawnPoints; 
+    public List<Transform> fuelCanspawnPoints; 
+    public List<Transform> airFilterspawnPoints; 
 
     void Start()
     {
@@ -25,7 +25,7 @@ public class ObjectSpawner : MonoBehaviour
         SpawnObjects(airFilter,airFilterspawnPoints,airFilterSpawnCount);
     }
 
-    void SpawnObjects(GameObject obj, Transform[] spawnpoints,int count)
+    void SpawnObjects(GameObject obj, List<Transform> spawnpoints,int count)
     {
        
             
@@ -33,13 +33,16 @@ public class ObjectSpawner : MonoBehaviour
             {     
                Transform spawnPoint = GetRandomSpawnPoint(spawnpoints);
                 Instantiate(obj, spawnPoint.position, Quaternion.identity);
+                
             }
         
     }
 
-    Transform GetRandomSpawnPoint(Transform[] spawnPoints)
+    Transform GetRandomSpawnPoint(List<Transform> spawnPoints)
     {
-        int randomIndex = Random.Range(0, spawnPoints.Length);
-        return spawnPoints[randomIndex];
+        int randomIndex = Random.Range(0, spawnPoints.Count);
+        Transform _spawnpoint = spawnPoints[randomIndex];
+        spawnPoints.RemoveAt(randomIndex);
+        return _spawnpoint;
     }
 }

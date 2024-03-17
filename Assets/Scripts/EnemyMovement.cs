@@ -86,7 +86,7 @@ public class EnemyController : MonoBehaviour
         else if (isPatrolling)
         {
             // Check if enemy has reached patrol destination
-            if (Vector3.Distance(transform.position, patrolDestination) <= 1f)
+            if (Vector3.Distance(transform.position, patrolDestination) <= 2f)
             {
                 Patrol();
             }
