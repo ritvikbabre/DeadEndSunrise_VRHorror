@@ -57,6 +57,7 @@ public class InventoryManager : MonoBehaviour
 
     public void resetInventoryitems()
     {
+        if (ItemContent == null) return;
         foreach (Transform item in ItemContent)
         {
             Destroy(item.gameObject);
@@ -66,6 +67,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SetInventoryItems()
     {
+        if(Inventoryitems == null) return;  
         
         Inventoryitems = ItemContent.GetComponentsInChildren<ItemController>();
 

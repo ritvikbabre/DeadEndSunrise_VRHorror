@@ -11,6 +11,12 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverUI;
     public GameObject GameWonUI;
 
+    public bool allTyresCollected;
+    public bool allFuelCanCollected;
+    public bool lockUnlocked;
+
+
+
     private void Awake()
     {
         if(Instance == null) { Instance = this; }
@@ -26,6 +32,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void CheckWinCondition()
+    {
+        if (allFuelCanCollected && allTyresCollected && lockUnlocked)
+        {
+            Debug.Log("you Won");
+        }
     }
 
     public void GameWon()
