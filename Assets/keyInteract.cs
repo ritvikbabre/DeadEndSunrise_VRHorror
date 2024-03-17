@@ -8,7 +8,6 @@ public class keyInteract : MonoBehaviour
 {
     private PlayerInput _playerInput;
 
-    public bool hasKey;
     public bool canInteractWithLock;
 
     public GameObject LockGO;
@@ -23,7 +22,7 @@ public class keyInteract : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.M))
         {
-            hasKey= true;
+            GameManager.Instance.HasKey= true;
         }
     }
 
@@ -34,7 +33,7 @@ public class keyInteract : MonoBehaviour
 
     public void InterActWithLock()
     {
-        if (hasKey)
+        if (GameManager.Instance.HasKey&&canInteractWithLock)
         {
             LockGO.active=false;
             GameManager.Instance.lockUnlocked=true;

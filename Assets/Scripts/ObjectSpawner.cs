@@ -32,7 +32,7 @@ public class ObjectSpawner : MonoBehaviour
     void SpawnObjects(GameObject obj, List<Transform> spawnpoints,int count)
     {
        
-            
+            if(spawnpoints.Count <=0||count<=0) { return; }
             for (int i = 0; i < count; i++)
             {     
                Transform spawnPoint = GetRandomSpawnPoint(spawnpoints);

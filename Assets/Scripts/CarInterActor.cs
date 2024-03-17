@@ -42,7 +42,8 @@ public class CarInterActor : MonoBehaviour
        if (CanRepairCar)
         {
             //open inventory 
-            GetComponent<FirstPersonController>().InteractWithInventory();
+            GameManager.Instance.CheckWinCondition();
+            //GetComponent<FirstPersonController>().InteractWithInventory();
         }
     }
 

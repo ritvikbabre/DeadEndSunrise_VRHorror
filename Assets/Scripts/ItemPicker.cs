@@ -60,12 +60,22 @@ public class ItemPicker : MonoBehaviour
             ItemPickUp itemPickUp;
             CarHandler carHandler;
 
-            if (obj.TryGetComponent<ItemPickUp>(out itemPickUp) )
+            if (obj.TryGetComponent<ItemPickUp>(out itemPickUp))
             {
 
                 itemPickUp.PickUP();
                 interactCanvas.enabled = false;
                 interactText.text = null;
+            }
+            else
+            {
+                Debug.Log("trying to get key");
+                    Debug.Log("objName: " + obj.name);
+                if (obj.tag == "key")
+                {
+                    GameManager.Instance.HasKey = true;
+                    obj.SetActive(false);
+                }
             }
         }
     }
