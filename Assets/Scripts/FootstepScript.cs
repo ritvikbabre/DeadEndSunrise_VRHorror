@@ -4,66 +4,26 @@ using UnityEngine;
 
 public class FootstepScript : MonoBehaviour
 {
-    public GameObject footstep;
+    public AudioSource footstepSound, sprintSound;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        footstep.SetActive(false);
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("w"))
-        {
-            footsteps();
+        if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                footstepSound.enabled = false;
+                sprintSound.enabled = true;
+            }
+            else
+            {
+                footstepSound.enabled = true;
+                sprintSound.enabled = false;
+            }   
         }
-
-        if (Input.GetKeyDown("s"))
+        else
         {
-            footsteps();
+            footstepSound.enabled = false;
+            sprintSound.enabled = false;
         }
-
-        if (Input.GetKeyDown("a"))
-        {
-            footsteps();
-        }
-
-        if (Input.GetKeyDown("d"))
-        {
-            footsteps();
-        }
-
-        if (Input.GetKeyUp("w"))
-        {
-            StopFootsteps();
-        }
-
-        if (Input.GetKeyUp("s"))
-        {
-            StopFootsteps();
-        }
-
-        if (Input.GetKeyUp("a"))
-        {
-            StopFootsteps();
-        }
-
-        if (Input.GetKeyUp("d"))
-        {
-            StopFootsteps();
-        }
-
-    }
-
-    void footsteps()
-    {
-        footstep.SetActive(true);
-    }
-
-    void StopFootsteps()
-    {
-        footstep.SetActive(false);
     }
 }
