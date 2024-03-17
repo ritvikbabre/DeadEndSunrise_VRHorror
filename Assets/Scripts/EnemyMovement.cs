@@ -22,7 +22,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private bool isPatrolling = false;
     private Vector3 patrolDestination;
 
-
     //grabbing stuff
     
 
@@ -76,6 +75,7 @@ public class EnemyController : MonoBehaviour
             navMeshAgent.SetDestination(player.position);
             animator.SetBool("isRunning", true);
 
+  //          Debug.Log("chasng");
             // Check if player is within close range
             if (Vector3.Distance(transform.position, player.position) <= closeRange)
             {
