@@ -195,8 +195,11 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, closeRange);
 
         // Visualize the patrol radius
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(player.position, patrolRadius);
+        if (player != null)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(player.position, patrolRadius);
+        }
 
         // Visualize the grab range
         Gizmos.color = Color.blue;
