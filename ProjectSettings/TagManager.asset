@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Wall
   - Enemy
+  - item
+  - CinemachineTarget
+  - Car
+  - lock
   layers:
   - Default
   - TransparentFX
