@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour
     public float patrolRadius = 5f;
     public float moveSpeed = 5f;
     public float grabDistance = 1.5f;
-    public Transform player;
+    [HideInInspector]public Transform player;
     public Transform grabPoint;
     public LayerMask playerLayer;
     public Animator animator;
@@ -69,10 +69,20 @@ public class EnemyController : MonoBehaviour
             isChasing = false;
         }
 
+            Debug.Log(navMeshAgent.remainingDistance);
         if (isChasing)
         {
             // Move towards the player
-            navMeshAgent.SetDestination(player.position);
+            // navMeshAgent.SetDestination(player.position);
+            //Debug.Log("Player pos " + player.position);
+            NavMeshHit navMeshHit;
+
+            if (NavMesh.SamplePosition(player.position, out navMeshHit, patrolRadius, NavMesh.AllAreas))
+            {
+                Vector3 playerpos = navMeshHit.position;
+                navMeshAgent.SetDestination(playerpos);
+                Debug.Log("patrolDestination : " + patrolDestination);
+            }
             animator.SetBool("isRunning", true);
 
   //          Debug.Log("chasng");
@@ -86,7 +96,7 @@ public class EnemyController : MonoBehaviour
         else if (isPatrolling)
         {
             // Check if enemy has reached patrol destination
-            if (Vector3.Distance(transform.position, patrolDestination) <= 2f)
+            if (Vector3.Distance(transform.position, patrolDestination) <= 3f)
             {
                 Patrol();
             }
@@ -123,6 +133,7 @@ public class EnemyController : MonoBehaviour
         {
             patrolDestination = navMeshHit.position;
             navMeshAgent.SetDestination(patrolDestination);
+            Debug.Log("patrolDestination : " + patrolDestination);
         }
     }
 
