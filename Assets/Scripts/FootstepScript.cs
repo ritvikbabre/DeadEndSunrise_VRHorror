@@ -2,28 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FootstepScript : MonoBehaviour
+public class PlayAudioOnMove : MonoBehaviour
 {
-    public AudioSource footstepSound, sprintSound;
+    private AudioSource audioSource;
+    private Vector3 lastPosition;
+    private bool isPlaying = false;
+
+    void Start()
+    {
+        // Get the AudioSource component attached to the same GameObject
+        audioSource = GetComponent<AudioSource>();
+
+        // Store the initial position
+        lastPosition = transform.position;
+    }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+        // Check if the position has changed since the last frame
+        if (transform.position != lastPosition)
+        {
+            // If audio is not already playing, start playing it
+            if (!isPlaying && audioSource != null && audioSource.clip != null)
             {
-                footstepSound.enabled = false;
-                sprintSound.enabled = true;
+                audioSource.Play();
+                isPlaying = true;
             }
-            else
-            {
-                footstepSound.enabled = true;
-                sprintSound.enabled = false;
-            }   
         }
         else
         {
-            footstepSound.enabled = false;
-            sprintSound.enabled = false;
+            // If the position hasn't changed and audio is playing, stop it
+            if (isPlaying)
+            {
+                audioSource.Stop();
+                isPlaying = false;
+            }
         }
+
+        // Update the lastPosition to the current position
+        lastPosition = transform.position;
     }
 }
