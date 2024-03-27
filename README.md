@@ -2,22 +2,24 @@
 Navigate the vastness of space in a thrilling VR experience where you must collect scattered car parts to escape. Encounter cosmic dangers and eerie landscapes as you race against time to assemble your means of survival.
 
 ## Steps
-1. Your stuck in the forest.
-2. You have to escape this place.
-3. You should find the car compoents in the forest.
-4. While searching car componets be alert with ghost, he can kill you.
-5. Without kill collected all components.
-6. Then come to car.
-7. You have to attached all componets in the car.
-8. After attacting car componets your win the game hureeee !! 🎉🥳🥳
+1. You are trapped in a village.
+2. You have to escape this village before the monster caaptures you.
+3. You need to find the car components in the village.
+4. While searching car components be alert of the monster, if he catches you then its game over.
+5. Without getting caught collect all the components.
+6. Unlock the gate in order to open the exit route.
+7. You have to attach all the collected components to the car.
+8. After fixing the car with the collected components you win the game!! 🎉🥳🥳
 
 ## Game Engine: unity
 Unity is a powerful and versatile game development platform that empowers creators to build immersive experiences across various platforms with ease. From stunning 2D and 3D graphics to robust physics and scripting capabilities, Unity offers a comprehensive suite of tools for developers to bring their visions to life.
 
-## installation 
-This part is not rokect science so lets go 
-#### Clone the repo
-#### Install unity 2022.3.7f1 (if you have then grate job)
-#### Now deploy the repo in the unity hub 
-#### 
+## Installation 
+Installation of the project is not very difficult.
+#### Clone the repo.
+#### Install Unity Hub.
+#### Install unity version 2022.3.7f1 on unity hub.
+#### Click on Add Project and select the repo folder.
+#### You should be able to see the cloned repository/project in Unity Hub's projects section now.
+#### Click on the Project and you should be able to open it on your device now.
 
