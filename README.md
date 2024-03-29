@@ -1,5 +1,5 @@
 # Vr_Horror Game
-Navigate the vastness of space in a thrilling VR experience where you must collect scattered car parts to escape. Encounter cosmic dangers and eerie landscapes as you race against time to assemble your means of survival.
+Navigate the vast village in a thrilling VR experience where you must collect scattered car parts to escape. Encounter cosmic dangers and eerie landscapes as you race against time to assemble your means of survival.
 
 ## Steps
 1. You are trapped in a village.
