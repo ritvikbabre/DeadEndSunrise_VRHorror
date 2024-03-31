@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Audio_Trigger : MonoBehaviour
+public class AudioTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public AudioClip audioClip;
+    public float volume = 1.0f; // Default volume is set to maximum (1.0f)
+    private bool hasPlayed = false;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player") && !hasPlayed)
+        {
+            AudioSource.PlayClipAtPoint(audioClip, transform.position, volume); // Play the audio clip with specified volume
+            hasPlayed = true;
+        }
     }
 }
