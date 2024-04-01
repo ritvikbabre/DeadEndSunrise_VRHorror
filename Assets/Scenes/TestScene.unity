@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00837791, g: 0.00887304, b: 0.019083029, a: 1}
+  m_IndirectSpecularColor: {r: 0.008399247, g: 0.008906743, b: 0.019084759, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17608,12 +17608,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955643940128550290, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7955643940128550290, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 0c7ae630d330de145b3e4cc5ede7c429, type: 3}
+      objectReference: {fileID: 8300000, guid: f3a6b1a892ba6cc43adfa91dd181bf8d, type: 3}
+    - target: {fileID: 7955643940128550290, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8979984525891132708, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_text
       value: YOU Escaped
