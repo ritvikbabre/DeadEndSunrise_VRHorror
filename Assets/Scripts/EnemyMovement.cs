@@ -69,7 +69,6 @@ public class EnemyController : MonoBehaviour
             isChasing = false;
         }
 
-            Debug.Log(navMeshAgent.remainingDistance);
         if (isChasing)
         {
             // Move towards the player
