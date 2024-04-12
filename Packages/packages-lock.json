@@ -1,5 +1,16 @@
 {
   "dependencies": {
+    "com.google.xr.cardboard": {
+      "version": "https://github.com/googlevr/cardboard-xr-plugin.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.7.0",
+        "com.unity.xr.management": "3.2.9",
+        "com.unity.xr.legacyinputhelpers": "2.1.4"
+      },
+      "hash": "3e21f7f7a43a6c9ce9690248028f94d44cde3988"
+    },
     "com.unity.ai.navigation": {
       "version": "1.1.5",
       "depth": 0,
@@ -53,15 +64,6 @@
         "com.unity.testtools.codecoverage": "1.2.4"
       }
     },
-    "com.unity.feature.vr": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.xr.oculus": "4.0.0",
-        "com.unity.xr.openxr": "1.8.2"
-      }
-    },
     "com.unity.ide.rider": {
       "version": "3.0.24",
       "depth": 1,
@@ -88,8 +90,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.6.3",
-      "depth": 0,
+      "version": "1.7.0",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
@@ -260,24 +262,6 @@
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0",
         "com.unity.xr.legacyinputhelpers": "2.1.7"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.xr.mock-hmd": {
-      "version": "https://github.com/needle-mirror/com.unity.xr.mock-hmd.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.xr.management": "4.0.1"
-      },
-      "hash": "ee35627a6e3f7f5298b96cc9907f845be2c20986"
-    },
-    "com.unity.xr.oculus": {
-      "version": "4.0.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.xr.management": "4.2.0"
       },
       "url": "https://packages.unity.com"
     },
