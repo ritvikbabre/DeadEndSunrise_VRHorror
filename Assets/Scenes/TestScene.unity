@@ -9817,7 +9817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a8df2e1d9c10ff41815a2ba33f2814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSources: []
 --- !u!1 &1039363505
 GameObject:
   m_ObjectHideFlags: 0
@@ -16746,7 +16745,7 @@ Transform:
   m_GameObject: {fileID: 2022152417}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 365.76147, y: 100.729126, z: 232.35355}
+  m_LocalPosition: {x: 365.76147, y: 99.9, z: 232.35355}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17708,7 +17707,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 176.54
+      value: 457.4
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17716,7 +17715,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 372.38
+      value: 56.5
       objectReference: {fileID: 0}
     - target: {fileID: 257268736845401811, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17785,6 +17784,18 @@ PrefabInstance:
     - target: {fileID: 5721910202638665810, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303020826350815583, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
+      propertyPath: CanRepairCar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303020826350815583, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
+      propertyPath: interactText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303020826350815583, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
+      propertyPath: interactRange
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7353309669726469826, guid: ad73c942ff87a1642ac7e464a011c137, type: 3}
       propertyPath: footstepSound
