@@ -265,15 +265,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.xr.mock-hmd": {
-      "version": "https://github.com/needle-mirror/com.unity.xr.mock-hmd.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.xr.management": "4.0.1"
-      },
-      "hash": "ee35627a6e3f7f5298b96cc9907f845be2c20986"
-    },
     "com.unity.xr.openxr": {
       "version": "1.8.2",
       "depth": 0,
