@@ -1,43 +1,82 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlaySoundOnMovement : MonoBehaviour
+public class ItemPicker : MonoBehaviour
 {
-    [SerializeField] private InputAction movementAction; // Reference to the movement action in the input action map
-    [SerializeField] private AudioClip movementSound;   // Sound to play when movement action is triggered
-    private AudioSource audioSource;                    // Reference to the AudioSource
+    private PlayerInput _playerInput;
+    [SerializeField] private float pickUpRange;
+    [SerializeField] private LayerMask itemLayer;
+    [SerializeField] private GameObject camera;
+    [SerializeField] private Canvas interactCanvas;
+    [SerializeField] private TextMeshProUGUI interactText;
+    [SerializeField] private string DisplayString;
+    [SerializeField] private bool canPickUp;
+
 
     private void Start()
     {
-        // Get reference to the AudioSource attached to this GameObject
-        audioSource = GetComponent<AudioSource>();
-
-        // Subscribe to the movement action's performed event
-        movementAction.performed += OnMovementPerformed;
+        _playerInput = GetComponent<PlayerInput>();
+        interactCanvas.enabled = false;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+      
     }
 
-    private void OnMovementPerformed(InputAction.CallbackContext context)
+    private void OnTriggerEnter(Collider other)
     {
-        // Check if the movement action was triggered by a key press
-        if (context.control.IsPressed())
+        Debug.Log("Entered trigger with " + other.gameObject.name);
+        if (other.gameObject.CompareTag("item"))
         {
-            // Play the movement sound using the AudioSource
-            if (audioSource != null && movementSound != null)
-            {
-                audioSource.PlayOneShot(movementSound);
-            }
+            Debug.Log(other);
+            interactCanvas.transform.position = other.transform.position + Vector3.up; // Position the canvas above the item
+            interactCanvas.enabled = true;
+            interactText.text = DisplayString;
+
+            canPickUp = true;
         }
     }
 
-    private void OnEnable()
+    private void OnTriggerExit(Collider other)
     {
-        // Enable the movement action when this component is enabled
-        movementAction.Enable();
+        if (other.gameObject.CompareTag("item"))
+        {
+            interactCanvas.enabled = false;
+            interactText.text = null;
+            canPickUp = false;
+        }
     }
 
-    private void OnDisable()
+    public void OnInteract(InputValue value)
     {
-        // Disable the movement action when this component is disabled
-        movementAction.Disable();
+        RaycastHit hit;
+        if (Physics.Raycast(camera.transform.position,camera.transform.forward, out hit,pickUpRange))
+        {
+            GameObject obj = hit.collider.gameObject;
+            ItemPickUp itemPickUp;
+            CarHandler carHandler;
+
+            if (obj.TryGetComponent<ItemPickUp>(out itemPickUp))
+            {
+
+                itemPickUp.PickUP();
+                interactCanvas.enabled = false;
+                interactText.text = null;
+            }
+            else
+            {
+                Debug.Log("trying to get key");
+                    Debug.Log("objName: " + obj.name);
+                if (obj.tag == "key")
+                {
+                    GameManager.Instance.HasKey = true;
+                    obj.SetActive(false);
+                }
+            }
+        }
     }
 }
