@@ -1,40 +1,55 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using System.Collections.Generic;
 
-public class PlayAudioOnMove : MonoBehaviour
+public class PlaySoundOnMove : MonoBehaviour
 {
-    private AudioSource audioSource;
-    private Rigidbody rb;
-    private bool isPlaying = false;
+    public InputActionAsset inputActionAsset;
+    public AudioClip movementSound;
 
-    void Start()
+    private AudioSource audioSource;
+    private InputAction moveAction;
+    private bool isMoving = false;
+
+    private void Start()
     {
         // Get the AudioSource component attached to the same GameObject
         audioSource = GetComponent<AudioSource>();
 
-        // Get the Rigidbody component attached to the player object
-        rb = GetComponent<Rigidbody>();
+        // Bind the action from the input action map
+        moveAction = inputActionAsset.FindAction("Move");
+        moveAction.performed += ctx => OnMovePerformed();
+        moveAction.canceled += ctx => OnMoveCanceled();
     }
 
-    void Update()
+    private void OnMovePerformed()
     {
-        // Check if the player's velocity is greater than zero
-        if (rb.velocity.magnitude > 0)
+        // Set the flag to indicate that movement input is active
+        isMoving = true;
+
+        // Play the movement sound if audio source and clip are valid
+        if (audioSource != null && movementSound != null && !audioSource.isPlaying)
         {
-            // If audio is not already playing, start playing it
-            if (!isPlaying && audioSource != null && audioSource.clip != null)
-            {
-                audioSource.Play();
-                isPlaying = true;
-            }
+            audioSource.clip = movementSound;
+            audioSource.Play();
         }
-        else
+    }
+
+    private void OnMoveCanceled()
+    {
+        // Set the flag to indicate that movement input is inactive
+        isMoving = false;
+
+        // Stop the movement sound
+        audioSource.Stop();
+    }
+
+    private void Update()
+    {
+        // If the movement input is inactive and the sound is still playing, stop the sound
+        if (!isMoving && audioSource.isPlaying)
         {
-            // If the player's velocity is zero and audio is playing, stop it
-            if (isPlaying)
-            {
-                audioSource.Stop();
-                isPlaying = false;
-            }
+            audioSource.Stop();
         }
     }
 }
