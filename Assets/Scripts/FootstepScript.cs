@@ -1,40 +1,41 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayAudioOnMove : MonoBehaviour
+public class PlaySoundOnMove : MonoBehaviour
 {
-    private AudioSource audioSource;
-    private Rigidbody rb;
-    private bool isPlaying = false;
+    public InputActionAsset inputActionAsset;
+    public AudioClip movementSound;
 
-    void Start()
+    private AudioSource audioSource;
+    private InputAction moveAction;
+
+    private void Start()
     {
         // Get the AudioSource component attached to the same GameObject
         audioSource = GetComponent<AudioSource>();
 
-        // Get the Rigidbody component attached to the player object
-        rb = GetComponent<Rigidbody>();
+        // Bind the action from the input action map
+        moveAction = inputActionAsset.FindAction("Move");
+        moveAction.performed += ctx => PlayMovementSound();
+        moveAction.canceled += ctx => StopMovementSound();
     }
 
-    void Update()
+    private void PlayMovementSound()
     {
-        // Check if the player's velocity is greater than zero
-        if (rb.velocity.magnitude > 0)
+        // Play the movement sound if audio source and clip are valid
+        if (audioSource != null && movementSound != null)
         {
-            // If audio is not already playing, start playing it
-            if (!isPlaying && audioSource != null && audioSource.clip != null)
-            {
-                audioSource.Play();
-                isPlaying = true;
-            }
+            audioSource.clip = movementSound;
+            audioSource.Play();
         }
-        else
+    }
+
+    private void StopMovementSound()
+    {
+        // Stop the movement sound
+        if (audioSource != null && audioSource.isPlaying)
         {
-            // If the player's velocity is zero and audio is playing, stop it
-            if (isPlaying)
-            {
-                audioSource.Stop();
-                isPlaying = false;
-            }
+            audioSource.Stop();
         }
     }
 }
