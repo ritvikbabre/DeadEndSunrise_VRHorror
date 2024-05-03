@@ -14390,7 +14390,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806982828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.02}
+  m_LocalPosition: {x: 0, y: 0, z: 4}
   m_LocalScale: {x: 0.35156, y: 0.35156, z: 0.35156}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14398,7 +14398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.47, y: 0.13}
+  m_AnchoredPosition: {x: 0, y: 0.13}
   m_SizeDelta: {x: 400, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1806982830
@@ -14421,10 +14421,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: pReSS StaRt to ReSume anD pReSS X to main menu
+  m_text: "PRESS TRIANGLE BUTTON (NORTH BUTTON) TO RESUME \nPRESS X TO EXIT"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 76e92e7e94bc8cb4183d532fa3ee5494, type: 2}
-  m_sharedMaterial: {fileID: -7354542602905652657, guid: 76e92e7e94bc8cb4183d532fa3ee5494, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
