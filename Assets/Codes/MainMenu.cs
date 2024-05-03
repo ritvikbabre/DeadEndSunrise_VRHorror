@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(1);
-    } 
+    }
 
     //Quit Game
     public void Quit()
@@ -19,3 +19,4 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log("Player Has Quit The Game");
     }
 }
+
