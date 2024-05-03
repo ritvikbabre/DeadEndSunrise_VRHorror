@@ -27,15 +27,15 @@ public class PauseMenu : MonoBehaviour
             if (Paused)
             {
                 Play();
+            }
+            else 
+            {
+                Stop();
                 if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
                     Debug.Log("X is pressed");
                 }
-            }
-            else 
-            {
-                Stop();
             }
             if (cursorLocked)
             { cursorLocked = false; Cursor.lockState = CursorLockMode.None; }
