@@ -42,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         Paused = true;
         Cursor.visible = true;
     }
+
     public void Play()
     {
         PauseMenuCanvas.SetActive(false);
