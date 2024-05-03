@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
@@ -19,7 +20,7 @@ public class PauseMenu : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { // || Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (Paused)
@@ -33,6 +34,11 @@ public class PauseMenu : MonoBehaviour
             if (cursorLocked)
             { cursorLocked = false; Cursor.lockState = CursorLockMode.None; }
             else { cursorLocked = true; Cursor.lockState = CursorLockMode.Locked; }
+        }
+        if(Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+            Debug.Log("X is pressed");
         }
     }
     void Stop()
