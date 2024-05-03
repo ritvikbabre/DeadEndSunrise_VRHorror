@@ -23,9 +23,15 @@ public class PauseMenu : MonoBehaviour
     { // || Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+
             if (Paused)
             {
                 Play();
+                if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                    Debug.Log("X is pressed");
+                }
             }
             else 
             {
@@ -35,11 +41,7 @@ public class PauseMenu : MonoBehaviour
             { cursorLocked = false; Cursor.lockState = CursorLockMode.None; }
             else { cursorLocked = true; Cursor.lockState = CursorLockMode.Locked; }
         }
-        if(Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            Debug.Log("X is pressed");
-        }
+        
     }
     void Stop()
     {

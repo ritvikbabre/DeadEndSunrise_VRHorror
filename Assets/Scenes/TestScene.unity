@@ -2598,6 +2598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb9943cfa526b54dabe414c18d3692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: 0}
+  movementSound: {fileID: 0}
 --- !u!82 &268265668
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13157,7 +13159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1595086673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14323,7 +14325,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1806982828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3.95}
+  m_LocalPosition: {x: 0, y: 0, z: 4.02}
   m_LocalScale: {x: 0.35156, y: 0.35156, z: 0.35156}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14331,7 +14333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.26, y: -0.16}
+  m_AnchoredPosition: {x: -0.47, y: 0.13}
   m_SizeDelta: {x: 400, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1806982830
@@ -14354,7 +14356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'pReSS StaRt to ReSume anD pReSS X to eXit '
+  m_text: pReSS StaRt to ReSume anD pReSS X to main menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76e92e7e94bc8cb4183d532fa3ee5494, type: 2}
   m_sharedMaterial: {fileID: -7354542602905652657, guid: 76e92e7e94bc8cb4183d532fa3ee5494, type: 2}
