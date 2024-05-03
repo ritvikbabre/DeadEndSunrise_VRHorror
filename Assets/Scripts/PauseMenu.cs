@@ -48,10 +48,15 @@ public class PauseMenu : MonoBehaviour
         }
 
         // Handle gamepad input for scene change (X button)
-        if (!Paused && Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+        if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            Debug.Log("X is pressed");
+            // Check if the pause menu is active before responding to the input
+            if (PauseMenuCanvas.activeSelf)
+            {
+                // Only load scene if the pause menu is active
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                Debug.Log("X is pressed");
+            }
         }
     }
 
@@ -68,6 +73,7 @@ public class PauseMenu : MonoBehaviour
         Paused = true;
         Cursor.visible = true;
     }
+
     public void Play()
     {
         PauseMenuCanvas.SetActive(false);
@@ -75,6 +81,7 @@ public class PauseMenu : MonoBehaviour
         Paused = false;
         Cursor.visible = false;
     }
+
     public void MainMenuButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);

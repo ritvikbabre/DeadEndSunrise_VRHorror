@@ -15619,6 +15619,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCapsule
       objectReference: {fileID: 0}
+    - target: {fileID: 5127152993761671733, guid: af01c33b7f97ad848adf5ff321fe5e23, type: 3}
+      propertyPath: movementSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f3a6b1a892ba6cc43adfa91dd181bf8d, type: 3}
+    - target: {fileID: 5127152993761671733, guid: af01c33b7f97ad848adf5ff321fe5e23, type: 3}
+      propertyPath: inputActionAsset
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
     - target: {fileID: 6076200918936852439, guid: af01c33b7f97ad848adf5ff321fe5e23, type: 3}
       propertyPath: m_Volume
       value: 0.492
