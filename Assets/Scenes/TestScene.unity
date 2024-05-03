@@ -2831,7 +2831,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e8dc5639d4b16714dbbf3dfe9dde6941, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 394d00ffaae5a984dabea21b06418efe, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3905,7 +3905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8aecd859a4d2ce540b369da36171e5e6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 274.5
+      value: 293.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8aecd859a4d2ce540b369da36171e5e6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9810,10 +9810,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b775960f27e75c4a88287adcb69fe0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseRange: 15
+  chaseRange: 25
   closeRange: 2
   patrolRadius: 100
-  moveSpeed: 3
+  moveSpeed: 3.5
   grabDistance: 1.5
   player: {fileID: 6583266828550309196}
   grabPoint: {fileID: 1365983035}
@@ -9907,9 +9907,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aa75a86ebc3cf9449a5ab502b87dbddf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8d80a14e673ce4f4eb2916674413e5a0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.735
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9918,7 +9918,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15
+  MaxDistance: 37.84
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayAudioOnMove : MonoBehaviour
 {
     private AudioSource audioSource;
-    private Vector3 lastPosition;
+    private Rigidbody rb;
     private bool isPlaying = false;
 
     void Start()
@@ -13,14 +11,14 @@ public class PlayAudioOnMove : MonoBehaviour
         // Get the AudioSource component attached to the same GameObject
         audioSource = GetComponent<AudioSource>();
 
-        // Store the initial position
-        lastPosition = transform.position;
+        // Get the Rigidbody component attached to the player object
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        // Check if the position has changed since the last frame
-        if (transform.position != lastPosition)
+        // Check if the player's velocity is greater than zero
+        if (rb.velocity.magnitude > 0)
         {
             // If audio is not already playing, start playing it
             if (!isPlaying && audioSource != null && audioSource.clip != null)
@@ -31,15 +29,12 @@ public class PlayAudioOnMove : MonoBehaviour
         }
         else
         {
-            // If the position hasn't changed and audio is playing, stop it
+            // If the player's velocity is zero and audio is playing, stop it
             if (isPlaying)
             {
                 audioSource.Stop();
                 isPlaying = false;
             }
         }
-
-        // Update the lastPosition to the current position
-        lastPosition = transform.position;
     }
 }
