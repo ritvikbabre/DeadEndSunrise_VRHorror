@@ -9,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     public static bool Paused = false;
     public GameObject PauseMenuCanvas;
     public bool cursorLocked = false;
+    private bool gameStarted = false; // Track if the game has started
+    private bool northButtonClicked = false; // Track if the North button has been clicked
 
     void Start()
     {
@@ -34,20 +36,21 @@ public class PauseMenu : MonoBehaviour
         }
 
         // Handle gamepad input for pause/resume
-        if (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame)
+        if (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame && !northButtonClicked)
         {
-            if (Paused)
+            if (gameStarted) // Check if the game has started
             {
-                Play();
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+                Debug.Log("North button is pressed");
             }
-            else
+            else // If the game has not started, open the main menu
             {
-                Stop();
+                OpenMainMenu();
             }
-            ToggleCursorLock();
+            northButtonClicked = true; // Set to true to indicate that the North button has been clicked
         }
 
-        // Handle gamepad input for scene change (X button)
+        // Check if the game is not paused before allowing X button on the gamepad to work
         if (!Paused && Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
@@ -86,5 +89,16 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Player Has been Quit The Game");
+    }
+
+    public void StartGame()
+    {
+        gameStarted = true;
+    }
+
+    public void OpenMainMenu()
+    {
+        // Open the main menu
+        Debug.Log("Main menu is opened");
     }
 }
