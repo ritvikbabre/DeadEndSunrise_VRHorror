@@ -4,13 +4,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-
 public class PauseMenu : MonoBehaviour
 {
     public static bool Paused = false;
     public GameObject PauseMenuCanvas;
     public bool cursorLocked = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         Time.timeScale = 1f;
@@ -18,36 +17,50 @@ public class PauseMenu : MonoBehaviour
         cursorLocked = true;
     }
 
-    // Update is called once per frame
     void Update()
-    { // || Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame
+    {
+        // Handle keyboard input
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-
             if (Paused)
             {
                 Play();
             }
-            else 
+            else
             {
                 Stop();
             }
-            if (cursorLocked)
-            { 
-                cursorLocked = false; Cursor.lockState = CursorLockMode.None; 
-            }
-            else 
-            { 
-                cursorLocked = true; Cursor.lockState = CursorLockMode.Locked; 
-            }
+            ToggleCursorLock();
         }
-        if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+
+        // Handle gamepad input for pause/resume
+        if (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame)
+        {
+            if (Paused)
+            {
+                Play();
+            }
+            else
+            {
+                Stop();
+            }
+            ToggleCursorLock();
+        }
+
+        // Handle gamepad input for scene change (X button)
+        if (!Paused && Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             Debug.Log("X is pressed");
         }
-
     }
+
+    void ToggleCursorLock()
+    {
+        cursorLocked = !cursorLocked;
+        Cursor.lockState = cursorLocked ? CursorLockMode.Locked : CursorLockMode.None;
+    }
+
     void Stop()
     {
         PauseMenuCanvas.SetActive(true);
@@ -68,6 +81,7 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
     public void Quit()
     {
         Application.Quit();
