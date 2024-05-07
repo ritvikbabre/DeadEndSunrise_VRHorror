@@ -1,7 +1,8 @@
 # Vr_Horror Game
 Navigate the vast village in a thrilling VR experience where you must collect scattered car parts to escape. Encounter cosmic dangers and eerie landscapes as you race against time to assemble your means of survival.
-## controll 
-![Pause](https://github.com/Ritvikyt/VR_Horror0/assets/79936181/67e2acf7-b1c8-4493-8a37-e2f7f310a3ab)
+## controller 
+![image](https://github.com/Ritvikyt/VR_Horror0/assets/79936181/73812944-a24c-420b-bf02-e42bc4637f75)
+
 
 ## Steps
 1. You are trapped in a village.
