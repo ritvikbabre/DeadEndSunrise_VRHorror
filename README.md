@@ -4,9 +4,9 @@ Navigate the vast village in a thrilling VR experience where you must collect sc
 ![image](https://github.com/Ritvikyt/VR_Horror0/assets/79936181/73812944-a24c-420b-bf02-e42bc4637f75)
 
 
-## Steps
+## Gameplay Loop
 1. You are trapped in a village.
-2. You have to escape this village before the monster caaptures you.
+2. You have to escape this village before the monster captures you.
 3. You need to find the car components in the village.
 4. While searching car components be alert of the monster, if he catches you then its game over.
 5. Without getting caught collect all the components.
