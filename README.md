@@ -1,7 +1,8 @@
-# Vr_Horror Game
-Navigate the vast village in a thrilling VR experience where you must collect scattered car parts to escape. Encounter cosmic dangers and eerie landscapes as you race against time to assemble your means of survival.
-## controller 
-![image](https://github.com/Ritvikyt/VR_Horror0/assets/79936181/73812944-a24c-420b-bf02-e42bc4637f75)
+# VR Horror Game
+Navigate the vast village in a thrilling VR experience where you must collect scattered car parts to escape. 
+Encounter cosmic dangers and encounter eerie landscapes as you race against time to assemble your means of survival.
+## Controller 
+![gamepad instuctions](https://github.com/Ritvikyt/VR_Horror0/assets/89725172/5fea41e0-e0c8-422d-8542-497e042a1594)
 
 
 ## Gameplay Loop
@@ -14,15 +15,15 @@ Navigate the vast village in a thrilling VR experience where you must collect sc
 7. You have to attach all the collected components to the car.
 8. After fixing the car with the collected components you win the game!! 🎉🥳🥳
 
-## Game Engine: unity
+## Game Engine: Unity
 Unity is a powerful and versatile game development platform that empowers creators to build immersive experiences across various platforms with ease. From stunning 2D and 3D graphics to robust physics and scripting capabilities, Unity offers a comprehensive suite of tools for developers to bring their visions to life.
 
 ## Installation 
 Installation of the project is not very difficult.
-#### Clone the repo.
-#### Install Unity Hub.
-#### Install unity version 2022.3.7f1 on unity hub.
-#### Click on Add Project and select the repo folder.
-#### You should be able to see the cloned repository/project in Unity Hub's projects section now.
-#### Click on the Project and you should be able to open it on your device now.
+1. Clone the repo.
+2. Install Unity Hub.
+3. Install Unity Editor version:2022.3.7f1 on Unity Hub.
+4. Click on Add Project and select the repo folder.
+5. You should be able to see the cloned repository/project in Unity Hub's projects section now.
+6. Click on the Project and open it on your device now.
 
