@@ -1,7 +1,7 @@
-# VR Horror Game
+# VR Horror Game // DeadEnd Sunrise
 Navigate the vast village in a thrilling VR experience where you must collect scattered car parts to escape. 
 Encounter cosmic dangers and encounter eerie landscapes as you race against time to assemble your means of survival.
-## Controller 
+## Controls
 ![gamepad instuctions](https://github.com/Ritvikyt/VR_Horror0/assets/89725172/5fea41e0-e0c8-422d-8542-497e042a1594)
 
 
